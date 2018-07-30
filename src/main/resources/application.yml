@@ -1,0 +1,26 @@
+eureka:
+  client:
+    register-with-eureka: true
+
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+      - id: patient-service
+        uri: lb://patient-service
+        predicates:
+        - Path=/patient/**
+        filters:
+        - RewritePath=/patient/(?<path>.*), /$\{path}
+      - id:  observation-service
+        uri: lb://observation-service
+        predicates:
+        - Path=/observation/**
+        filters:
+        - RewritePath=/observation/(?<path>.*), /$\{path}
+
