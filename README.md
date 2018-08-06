@@ -7,17 +7,17 @@
 * Predicates and filters are specific to routes
 * Path Rewriting
 
-##Tools
+##  Tools
 
 * JDK 1.8 or later
 * Maven
 * Spring Tool Suite or Intellij IDEA
 * Git
 
-##Architecture
+##  Architecture
 <img width="650" alt="springboot-petclinic" src="./images/spring-cloud-architecture.png">
 
-##Configuration
+## Configuration
 The Spring Cloud Gateway provides three basic components used for configuration: 
 routes, predicates, and filters. A route is the basic building block of the gateway. 
 It contains the destination URI and list of defined predicates and filters. 
@@ -54,6 +54,6 @@ for Eureka based on the URI value ***lb://organization-service***.
          filters:
          - RewritePath=/patient/(?<path>.*), /$\{$path}
          
-##Improves
+## Improves
 * Hystrix Circuit Breaker integration for resiliency patterns
 * API Specification with Swagger
