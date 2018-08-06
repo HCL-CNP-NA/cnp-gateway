@@ -15,7 +15,7 @@
 * Git
 
 ##Architecture
-<img width="782" alt="springboot-petclinic" src="./images/spring-cloud-architecture.png">
+<img width="650" alt="springboot-petclinic" src="./images/spring-cloud-architecture.png">
 
 ##Configuration
 The Spring Cloud Gateway provides three basic components used for configuration: 
